@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>FlightSurety</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">FlightSurety</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarsExampleDefault"
+        aria-controls="navbarsExampleDefault"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+
+    <div class="container">
+      <div id="display-wrapper" class="top-20"></div>
+      <div class="row top-20">
+        <label class="form">Flight</label>
+        <input type="text" id="flight-number" />
+        <btn class="btn btn-primary" id="submit-oracle">Submit to Oracles</btn>
+      </div>
+    </div>
+
+    <main>
+      <div class="paper-form">
+        <h2>Registered Airline</h2>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Address</th>
+              <th scope="col">Funds</th>
+            </tr>
+          </thead>
+
+          <tbody id="registeredAirlineTableBody"></tbody>
+        </table>
+      </div>
+
+      <div class="paper-form">
+        <form id="registerAirlineForm">
+          <h2>Register Airline</h2>
+
+          <div class="form-group">
+            <label for="airline">Airline address</label>
+            <select
+              name="airline"
+              id="registerAirlineFormAirlineSelect"
+              class="form-control"
+            >
+              <option selected disabled>Select one:</option>
+            </select>
+          </div>
+          <button type="button" class="btn btn-primary" id="registerAirlineBtn">
+            Register
+          </button>
+        </form>
+      </div>
+
+      <div class="paper-form">
+        <form id="fundAirlineForm">
+          <h2>Fund Airline</h2>
+
+          <div class="form-group">
+            <label for="airline">Airline address</label>
+            <select id="fundAirlineFormAirlineSelect" class="form-control">
+              <option selected disabled>Select one:</option>
+            </select>
+          </div>
+
+          <button type="button" class="btn btn-primary" id="fundAirlineBtn">
+            Fund
+          </button>
+        </form>
+      </div>
+
+      <div class="paper-form">
+        <form>
+          <h2>Buy Flight Insurance</h2>
+
+          <div class="form-group">
+            <label for="airline">Airline</label>
+            <select id="buyFlightInsuranceAirlineSelect" class="form-control">
+              <option selected disabled>Select one:</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="flight">Flight Number</label>
+            <select name="flight" id="flightSelect" class="form-control">
+              <option selected disabled>Select one:</option>
+              <option>FX1234</option>
+              <option>FX4567</option>
+              <option>FX2020</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="amount">Insurance Value</label>
+            <input
+              id="amountInput"
+              name="amount"
+              class="form-control"
+              placeholder="500"
+            />
+            <small id="emailHelp" class="form-text text-muted">Up to 1 ether (Please type value in wei)</small>
+          </div>
+
+          <div class="form-group">
+            <label for="timestamp">Date</label>
+            <input
+              id="timestampInput"
+              name="timestamp"
+              class="form-control"
+              placeholder="2020-05-13"
+              type="date"
+            />
+          </div>
+
+          <button type="button" class="btn btn-primary" id="BuyInsuranceBtn">
+            Buy
+          </button>
+        </form>
+      </div>
+
+
+      <div class="paper-form">
+        <form id="fundAirlineForm">
+          <h2>Withdraw Credit</h2>
+
+          <button type="button" class="btn btn-primary" id="withdrawBtn">
+            Fund
+          </button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
